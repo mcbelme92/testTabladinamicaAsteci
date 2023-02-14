@@ -78,8 +78,8 @@ export const TableDynamic = () => {
               
             </Table.Row>
           </Table.Body>
-          <Table.Footer>
-     {/*  <Table.Row>
+    {/*       <Table.Footer>
+      <Table.Row>
         <Table.HeaderCell colSpan='3'>
           <Menu floated='right' pagination>
             <Menu.Item as='a' icon>
@@ -94,8 +94,8 @@ export const TableDynamic = () => {
             </Menu.Item>
           </Menu>
         </Table.HeaderCell>
-      </Table.Row> */}
-    </Table.Footer>
+      </Table.Row>
+    </Table.Footer> */}
         </Table>
       </div>
     </div>
