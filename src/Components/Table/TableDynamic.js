@@ -40,7 +40,7 @@ export const TableDynamic = () => {
             </Table.Row>
           </Table.Header>
           <Table.Body>
-             {map(InfoTable.results, (product) => ( 
+             {map(InfoTable?.results, (product) => ( 
               <Table.Row key={ product?._id }  className="sumary-cart__product">
                 <Table.Cell>
                   
@@ -73,13 +73,13 @@ export const TableDynamic = () => {
               <Table.Cell className="total-price">
               <Table.Cell colSpan="5">Total:</Table.Cell>
                   
-              {InfoTable.pagination.total}
+              {InfoTable?.pagination?.total}
               </Table.Cell>
               
             </Table.Row>
           </Table.Body>
           <Table.Footer>
-      <Table.Row>
+     {/*  <Table.Row>
         <Table.HeaderCell colSpan='3'>
           <Menu floated='right' pagination>
             <Menu.Item as='a' icon>
@@ -94,7 +94,7 @@ export const TableDynamic = () => {
             </Menu.Item>
           </Menu>
         </Table.HeaderCell>
-      </Table.Row>
+      </Table.Row> */}
     </Table.Footer>
         </Table>
       </div>
