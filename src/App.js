@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <p>Tabla Dinamica </p>
-      <TableDynamic/>
+      <TableDynamic className="TableDynamic2" />
     </div>
   );
 }

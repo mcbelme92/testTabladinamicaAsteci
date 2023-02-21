@@ -31,8 +31,12 @@ export const TableDynamic = () => {
      setCurrentPage( currentPage + 10);
   }
 
+  const beforePage = () => {
+     setCurrentPage( currentPage - 10);
+  }
+
   return (
-    <div className="sumary-cart">
+    <div className="TableDynamic">
       <div className="title">Tabla informacion</div>
       <div className="data">
         <Table celled structured>
@@ -87,10 +91,10 @@ export const TableDynamic = () => {
             </Table.Row>
           </Table.Body>
           <Table.Footer>
-      <Table.Row >
-        <Table.HeaderCell colSpan='3'>
+      <Table.Row  >
+        <Table.HeaderCell colSpan='3' style={{with: 100}}>
           <Menu floated='right' pagination >
-            <Menu.Item as='a' icon>
+            <Menu.Item as='a' icon onClick={beforePage}>
               <Icon name='chevron left' />
             </Menu.Item>
             {/* <Menu.Item as='a' >1</Menu.Item>
