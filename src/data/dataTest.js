@@ -1,3 +1,4 @@
+exports.dataTest =
 {
 	"pagination": {
 		"pageSize": 100,
