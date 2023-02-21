@@ -32,7 +32,10 @@ export const TableDynamic = () => {
   }
 
   const beforePage = () => {
-     setCurrentPage( currentPage - 10);
+    if (currentPage > 0 ) {
+      setCurrentPage(currentPage - 10);
+      
+    }
   }
 
   return (
@@ -87,12 +90,7 @@ export const TableDynamic = () => {
                   
               {InfoTable?.pagination?.total}
               </Table.Cell>
-              
-            </Table.Row>
-          </Table.Body>
-          <Table.Footer>
-      <Table.Row  >
-        <Table.HeaderCell colSpan='3' style={{with: 100}}>
+              <Table.HeaderCell colSpan='3' style={{with: 100}}>
           <Menu floated='right' pagination >
             <Menu.Item as='a' icon onClick={beforePage}>
               <Icon name='chevron left' />
@@ -106,6 +104,12 @@ export const TableDynamic = () => {
             </Menu.Item>
           </Menu>
         </Table.HeaderCell>
+              
+            </Table.Row>
+          </Table.Body>
+          <Table.Footer>
+      <Table.Row  >
+        
       </Table.Row>
     </Table.Footer>
         </Table>
