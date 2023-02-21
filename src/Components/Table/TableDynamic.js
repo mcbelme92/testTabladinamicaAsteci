@@ -6,7 +6,8 @@ import { getInformationGob } from '../../Api/Table';
 
 export const TableDynamic = () => {
 
-  const [InfoTable, setInfoTable] = useState(null);
+  const [InfoTable, setInfoTable] = useState([]);
+  const [currentPage, setCurrentPage] = useState(0);
 
 
   useEffect(() => {
@@ -19,9 +20,16 @@ export const TableDynamic = () => {
     
   }, [])
     
-  console.log("informacion", InfoTable)
-  
+  console.log("informacion", InfoTable.results)
 
+  const filterPage = () => {
+    return InfoTable.results?.slice(currentPage,currentPage + 10);
+  }
+  console.log(typeof InfoTable)
+  
+  const nextPage = () => {
+     setCurrentPage( currentPage + 10);
+  }
 
   return (
     <div className="sumary-cart">
@@ -40,7 +48,7 @@ export const TableDynamic = () => {
             </Table.Row>
           </Table.Header>
           <Table.Body>
-             {map(InfoTable?.results, (product) => ( 
+             {map(filterPage(), (product) => ( 
               <Table.Row key={ product?._id }  className="sumary-cart__product">
                 <Table.Cell>
                   
@@ -78,24 +86,24 @@ export const TableDynamic = () => {
               
             </Table.Row>
           </Table.Body>
-    {/*       <Table.Footer>
-      <Table.Row>
+          <Table.Footer>
+      <Table.Row >
         <Table.HeaderCell colSpan='3'>
-          <Menu floated='right' pagination>
+          <Menu floated='right' pagination >
             <Menu.Item as='a' icon>
               <Icon name='chevron left' />
             </Menu.Item>
-            <Menu.Item as='a'>1</Menu.Item>
+            {/* <Menu.Item as='a' >1</Menu.Item>
             <Menu.Item as='a'>2</Menu.Item>
             <Menu.Item as='a'>3</Menu.Item>
-            <Menu.Item as='a'>4</Menu.Item>
-            <Menu.Item as='a' icon>
+            <Menu.Item as='a'>4</Menu.Item> */}
+            <Menu.Item as='a' icon onClick={nextPage}>
               <Icon name='chevron right' />
             </Menu.Item>
           </Menu>
         </Table.HeaderCell>
       </Table.Row>
-    </Table.Footer> */}
+    </Table.Footer>
         </Table>
       </div>
     </div>
