@@ -3,7 +3,7 @@ import { dataTest } from "../data/dataTest";
 
 
 
-describe('Pruebas en </>', () => {
+describe('Pruebas en Datos de la tabla', () => {
     
   test('debe de retornar un arreglo de objetos',async () => {
       const informacionFuncion = await getInformationGob();
