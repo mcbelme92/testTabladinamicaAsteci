@@ -47,9 +47,9 @@ export const TableDynamic = () => {
             <Table.Row>
               <Table.HeaderCell>-id</Table.HeaderCell>
               <Table.HeaderCell>CityId</Table.HeaderCell>
-              <Table.HeaderCell>name</Table.HeaderCell>
-              <Table.HeaderCell>state</Table.HeaderCell>
-              <Table.HeaderCell>probabilityofprecip</Table.HeaderCell>
+              <Table.HeaderCell style={{with: 100}}>name</Table.HeaderCell>
+              <Table.HeaderCell style={{with: 100}}>state</Table.HeaderCell>
+              <Table.HeaderCell style={{with: 100}}>probabilityofprecip</Table.HeaderCell>
               <Table.HeaderCell>relativehumidity</Table.HeaderCell>
               <Table.HeaderCell>Lastreporttime  </Table.HeaderCell>
             </Table.Row>
